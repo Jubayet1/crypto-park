@@ -9,6 +9,7 @@ import Contact from "./pages/Contact/Contact";
 import Home from "./pages/Home/Home";
 import BdAddress from "./pages/Contact/BDAddress";
 import UsAddress from "./pages/Contact/USAddress";
+import CoinDetails from "./components/CoinDetails/CoinDetails";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,6 +24,10 @@ function App() {
         {
           path: "/coins",
           element: <Coin />,
+        },
+        {
+          path: '/coin-details/:id',
+          element: <CoinDetails />
         },
         {
           path: "/contact",
