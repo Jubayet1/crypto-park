@@ -7,6 +7,8 @@ import Coin from "./pages/Coin/Coin";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Home from "./pages/Home/Home";
+import BdAddress from "./pages/Contact/BDAddress";
+import UsAddress from "./pages/Contact/USAddress";
 
 function App() {
   const router = createBrowserRouter([
@@ -25,6 +27,16 @@ function App() {
         {
           path: "/contact",
           element: <Contact />,
+          children: [
+            {
+              path: 'bd-address',
+              element: <BdAddress />
+            },
+            {
+              path: 'us-address',
+              element: <UsAddress />
+            }
+          ]
         },
         {
           path: "/about",
